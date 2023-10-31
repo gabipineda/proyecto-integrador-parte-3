@@ -1,0 +1,19 @@
+import os
+import random
+
+
+def __init__(self, path_a_mapas):
+        nombre_archivo = random.choice(os.listdir(path_a_mapas))
+        path_completo = os.path.join(path_a_mapas, nombre_archivo)
+        mapa_str = self.leer_mapa(path_completo)
+        mapa = self.convertir_mapa(mapa_str)
+        inicio, final = self.obtener_inicio_final(mapa_str)
+        #super# ().__init__(mapa, inicio, final)
+def leer_mapa(self, path):
+        with open(path, 'r') as archivo:
+            return archivo.read()
+def obtener_inicio_final(self, mapa_str):
+        lineas = mapa_str.strip().split('\n')
+        inicio = tuple(map(int, lineas[-2].split()))
+        final = tuple(map(int, lineas[-1].split()))
+        return inicio, final
