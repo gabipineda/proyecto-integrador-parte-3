@@ -1,7 +1,0 @@
-mayor=0
-num=int(input("intro num"))
-while num != 0:
-    if num > mayor:
-        mayor=num
-    num=int(input("intro num")) #se pone al final ya que además de pedir el nuevo num, tambien permitirá salir del bucle si es zero
-print (mayor)
